@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<BorderPane xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vueControl.ControleurTP6">
+	<bottom>
+	   <GridPane fx:id="monGridPane" gridLinesVisible="true" style="-fx-background-color: rgb(0,0,0);" BorderPane.alignment="CENTER">
+		<children>
+            <TextField prefHeight="40.0" prefWidth="40.0" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <TextField prefHeight="40.0" prefWidth="40.0" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <TextField prefHeight="40.0" prefWidth="40.0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+				<!--  case laissée noire par omission du TextField :
+				        <TextField prefHeight="40.0" prefWidth="40.0"
+				        		GridPane.columnIndex="1" GridPane.rowIndex="1" />
+				-->
+			 <TextField prefHeight="40.0" prefWidth="40.0" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+            <TextField prefHeight="40.0" prefWidth="40.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+		</children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints />
+            <ColumnConstraints />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+         </rowConstraints>
+	   </GridPane>
+	</bottom>
+</BorderPane>
