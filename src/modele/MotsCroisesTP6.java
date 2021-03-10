@@ -1,4 +1,3 @@
-
 package modele;
 
 import javafx.beans.property.SimpleStringProperty;
@@ -23,6 +22,27 @@ public class MotsCroisesTP6 implements SpecifMotsCroises{
 		}
 	}
 
+	
+	/**
+	 * @return true si le deplacement a partir de la case de coordonées(lig,col)
+	 *  est possible selon le sens
+	 **/
+	public boolean directionPossible(int lig, int col,String sens) { 
+		
+		boolean haut=solution.coordCorrectes(lig-1, col)&&!estCaseNoire(lig-1,col);
+		boolean droite=solution.coordCorrectes(lig, col+1)&&!estCaseNoire(lig,col+1);
+		boolean bas=solution.coordCorrectes(lig+1, col)&&!estCaseNoire(lig+1,col);
+		boolean gauche=solution.coordCorrectes(lig, col-1)&&!estCaseNoire(lig,col-1);
+		
+		switch(sens){
+		case "haut" : return haut;
+		case "droite" : return droite;
+		case "bas" : return bas;
+		case "gauche": return gauche;
+		}
+		return false;	
+	}
+	
 	public int getHauteur()
 	{
 		return solution.getHauteur() ;
@@ -83,16 +103,15 @@ public class MotsCroisesTP6 implements SpecifMotsCroises{
 	{
 		assert coordCorrectes(lig, col) ;
 		assert !estCaseNoire(lig, col) ;
-		proposition.setCellule(lig, col, new SimpleStringProperty(prop+"")) ;
+		proposition.getCellule(lig, col).set(prop+""); 
 	}
 	
 	public StringProperty propositionProperty(int lig, int col) {
 		return proposition.getCellule(lig, col);
-		//return new SimpleStringProperty(getProposition(lig,col)+"");
 	}
 
 	public void reveler(int lig, int col) {
-		setProposition(lig, col, getSolution(lig,col));
+		setProposition(lig, col, getSolution(lig,col)); 
 	}
 	
 	public String getDefinition(int lig, int col, boolean horiz)
