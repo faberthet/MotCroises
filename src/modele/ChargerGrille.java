@@ -26,11 +26,11 @@ public class ChargerGrille{
 		 return connect ;
 	 }
 	 // Retourne la liste des grilles disponibles dans la B.D.
-	 // Chaque grille est décrite par la concaténation des valeurs
+	 // Chaque grille est dÃ©crite par la concatÃ©nation des valeurs
 	 // respectives des colonnes nom_grille, hauteur et largeur.
-	 // L’élément de liste ainsi obtenu est indexé par le numéro de
+	 // Lâ€™Ã©lÃ©ment de liste ainsi obtenu est indexÃ© par le numÃ©ro de
 	 // la grille (colonne num_grille).
-	 // Ainsi "Français débutants (7x6)" devrait être associé à la clé 10
+	 // Ainsi "FranÃ§ais dÃ©butants (7x6)" devrait Ãªtre associÃ© Ã  la clÃ© 10
 	 public Map<Integer, String> grillesDisponibles(){ 
 		 Map<Integer, String> map= new HashMap<Integer, String>();
 		 try {
@@ -76,9 +76,9 @@ public class ChargerGrille{
 				 int longueurMot=solution.length();
 				 for (int i=0; i<longueurMot; i++) {
 					 if (rs.getInt("horizontal")==1) {
-						 mocr.setSolution(rs.getInt("ligne"), rs.getInt("colonne")+i, solution.charAt(i));
+						 mocr.setSolution(rs.getInt("ligne"), rs.getInt("colonne")+i, Character.toUpperCase(solution.charAt(i)));
 					 }else {
-						 mocr.setSolution(rs.getInt("ligne")+i, rs.getInt("colonne"), solution.charAt(i));
+						 mocr.setSolution(rs.getInt("ligne")+i, rs.getInt("colonne"), Character.toUpperCase(solution.charAt(i)));
 					 }
 				 }
 			 }
