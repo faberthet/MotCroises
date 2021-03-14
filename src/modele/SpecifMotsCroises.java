@@ -1,6 +1,5 @@
 package modele;
-public interface SpecifMotsCroises
-{
+public interface SpecifMotsCroises{
 	// Nombre de rangées
 	public int getHauteur() ;
 
