@@ -11,7 +11,7 @@ public class MainTP6 extends Application {
 	public void start(Stage primaryStage) {
 		try
 		{
-	        primaryStage.setTitle("TP6 binome1-binome2");
+	        primaryStage.setTitle("TP6 Fabrice Berthet");
 			FXMLLoader loader = new FXMLLoader() ;
             loader.setLocation(MainTP6.class.getResource("VueTP6.fxml"));
             Parent root = (Parent) loader.load();
